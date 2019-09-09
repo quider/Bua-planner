@@ -4,8 +4,11 @@ import com.framgia.library.calendardayview.data.IEvent;
 
 import java.util.Calendar;
 
+import lombok.Data;
+
+@Data
 public class Event implements IEvent {
-    private long id;
+    private String id;
     private Calendar startTime;
     private Calendar endTime;
     private String name;
@@ -18,7 +21,7 @@ public class Event implements IEvent {
     public Event() {
     }
 
-    public Event(long id, Calendar startTime, Calendar endTime, String name, String location, int color) {
+    public Event(String id, Calendar startTime, Calendar endTime, String name, String location, int color) {
         this.id = id;
         this.startTime = startTime;
         this.endTime = endTime;
@@ -27,11 +30,11 @@ public class Event implements IEvent {
         this.color = color;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
